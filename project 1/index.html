@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project 1</title>
+    <link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+    <div class="wrapper">
+        <header class="container">
+            <div class="logo-nav-container">
+            <span class="logo">Nvidia</span>
+                <nav>
+                    <ul>
+                        <li class="active"><a href="#1">Home</a></li>
+                        <li><a href="#2">About us</a></li>
+                        <li><a href="#3">Video Cards</a></li>
+                        <li class="btn"><a href="https://www.nvidia.com/en-us/">More Information</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <div class="hero container">
+            <div class="hero-info" id="1">
+                <h1>Nvidia Company</h1>
+                <p>NVIDIA is the pioneer of GPU-accelerated computing.</p>
+            </div>
+            <div class="slideshow-container">
+                <div class="slide fade">
+                    <img src="img/images.png" alt="Изображение 1">
+                </div>
+                <div class="slide fade">
+                    <img src="img/download.png" alt="Изображение 2">
+                </div>
+                <div class="slide fade">
+                    <img src="img/download-1.png" alt="Изображение 3">
+                </div>
+                <div class="slide fade">
+                    <img src="img/images-1.png" alt="Изображение 4">
+                </div>
+            </div>
+            <div class="about">
+                <h2></h2>
+                <div class="">
+                    <div class="hero-info">
+                    </div>
+                </div>
+            </div>
+        </div>
+            <div class="container trending" id="3">
+                <a href="https://www.nvidia.com/de-de/geforce/graphics-cards/" class="see-all">See All</a>
+                <h3>NVIDIA Video Cards</h3>
+                <div class="games">
+                    <div class="block">
+                        <img src="/img/download.png" alt="">
+                        <span>NVIDIA GeForce RTX 3050</span>
+                    </div>
+                    <div class="block">
+                        <img src="/img/download-1.png" alt="">
+                        <span>NVIDIA GeForce RTX 3050 TI</span>
+                    </div>
+                    <div class="block">
+                        <img src="/img/images-1.png" alt="">
+                        <span>NVIDIA GeForce RTX 2060 Super</span>
+                    </div>
+                    <div class="block">
+                        <img src="/img/images.png" alt="">
+                        <span>NVIDIA GeForce RTX 1080 TI</span>
+                    </div>
+                </div>
+            </div>
+        <div class="container big-text" id="2">
+        </div>
+        <div class="container banner">
+            <h3>About Nvidia</h3>
+            <p>Nvidia Corporation is an American multinational corporation and technology company headquartered in Santa Clara, California, and incorporated in Delaware. It is a software and fabless company which designs and supplies graphics processing units (GPUs), application programming interfaces (APIs) for data science and high-performance computing, as well as system on a chip units (SoCs) for the mobile computing and automotive market</p>
+            <img src="/img/NVIDIA-2_large.jpg" alt="">
+        </div>
+        <div class="container feat">
+            <h3>Where Nvidia technologies are used</h3>
+            <div class="info">
+                <div class="block">
+                    <img src="img/download.jpg" alt="">
+                    <p>Gaming</p>
+                </div>
+                <div class="block">
+                    <img src="/img/download-1.jpg" alt="">
+                    <p>Designing</p>
+                </div>
+                <div class="block">
+                    <img src="/img/download-2.jpg" alt="">
+                    <p>3D Designing</p>
+                </div>
+                <div class="block">
+                    <img src="/img/download-3.jpg" alt="">
+                    <p>Architecture</p>
+                </div>
+                <div class="block">
+                    <img src="/img/download-4.jpg" alt="">
+                    <p>3D Simulations</p>
+                </div>
+            </div>
+        </div>
+    </div>
+<div class="scroll-to-top" onclick="scrollToTop()">↑</div>
+</body>
+<script>
+    let slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+        let slides = document.querySelectorAll('.slide');
+        slides.forEach((slide) => (slide.style.display = 'none'));
+        
+        slideIndex++;
+        if (slideIndex > slides.length) { slideIndex = 1; }
+        
+        slides[slideIndex - 1].style.display = 'block';
+        setTimeout(showSlides, 3000);
+    }
+
+    function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    window.addEventListener('scroll', function() {
+    const scrollButton = document.querySelector('.scroll-to-top');
+    if (window.scrollY > 300) {
+        scrollButton.classList.add('show');
+    } else {
+        scrollButton.classList.remove('show');
+    }
+    });
+
+</script>
+
+</html>
